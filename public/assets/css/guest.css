@@ -1,0 +1,183 @@
+:root{
+    --dfx-bg-color: #f9f8fa;
+    --dfx-text-color: rgba(33, 37, 41, 0.75);
+    --dfx-sidebar-width: 220px;
+    --dfx-brand-height: 55px;
+    --dfx-global-palette-blue: #3300ff;
+    --dfx-global-palette-green: #b2f24f;
+    --dfx-global-palette-darkblue: #052093;
+    --dfx-global-palette-navyblue: #000a30;
+    --dfx-global-palette-maroon: #6b2222;
+    --dfx-global-palette-sweater: #ac5c5c;
+    --dfx-global-palette-light: #eeeeee;
+    --dfx-global-palette-light2: #fcfcfc;
+    --dfx-global-palette-white: #ffffff;
+    --dfx-border-color: #dee2e6;
+    --dfx-border-radius: 0.25rem;
+    --dfx-sidebar-bg: linear-gradient(#878f9f, #959595);
+}
+
+@media (max-width: 768px){
+    :root{
+        --dfx-sidebar-width:0px
+    }
+
+    .sidebar-wrapper > *{
+        display: none;
+    }
+}
+
+*, *::before, *::after{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------------
+    Table of Content
+
+        1. Header Section
+
+        2. Body Section
+
+        3. Login
+
+        4. Register
+
+
+----------------------------*/
+
+/* ---------------------------
+    Body Section
+-----------------------------*/
+
+body{
+    color: var(--dfx-text-color);
+    font-family: 'Nunito', Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+
+body a{
+    color: var(--dfx-text-color);
+}
+
+body a:hover{    
+    color: var(--dfx-text-color)
+}
+
+/* -----------------------------------
+    Header Section
+------------------------------------*/
+.header{
+    background: var(--dfx-global-palette-darkblue);
+}
+ 
+.header .navbar-toggler{
+    display: none;
+}
+
+.header .container{
+    background-color: var(--dfx-global-palette-navyblue);
+}
+
+.header .header-branding .img-fluid{
+    height: 50px;
+    margin-left: 20px;
+}
+
+.header .nav.nav-pills .nav-link.active{
+    background-color: var(--dfx-global-palette-navyblue) ;
+}
+
+.header .nav.nav-pills .nav-link{
+    margin-left: 15px;
+    border-radius: 0;
+    color: var(--dfx-global-palette-white);
+}
+
+.header .nav.nav-pills .nav-link.active,
+.header .nav.nav-pills .nav-link:hover{
+    color: var(--dfx-global-palette-green);
+    border-bottom: 2px solid var(--dfx-global-palette-green);
+}
+
+.header .nav.nav-pills .nav-item .nav-link{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 2;
+    font-family: 'Krona One', sans-serif;
+}
+
+@media (max-width: 767px) {
+    .header.navbar{
+        display: none;
+    }
+}
+
+/* -----------------------------------
+    Login Page
+------------------------------------*/
+
+.main-wrapper.auth .container{
+    background-color: var(--dfx-bg-color);
+}
+
+.main-wrapper.auth .container .social-icon{
+    border: 1px solid var(--dfx-border-color);
+    border-radius: var(--dfx-border-radius);
+    margin: 0 .325rem;
+    padding: .725rem;
+    font-size: 1rem;
+}
+
+.main-wrapper.auth .container .form-group{
+    margin: .5rem 2rem 2rem 2rem;
+}
+
+.main-wrapper.auth .container .toggle{
+    display: flex;
+    background-color: var(--dfx-global-palette-navyblue);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 5rem;
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: .5rem;
+    border-top-right-radius: .5rem;
+    color: #fff;
+    padding: 2rem;
+    height: 100%;
+}
+
+.main-wrapper.auth .container .toggle.toggle-left{
+    border-bottom-left-radius: .5rem;
+    border-top-left-radius: .5rem;
+    border-bottom-right-radius: 5rem;
+    border-top-right-radius: 5rem;
+}
+
+
+@media (max-width: 575px) {
+    .main-wrapper.auth .container .toggle.toggle-left{
+        border-bottom-left-radius: 5rem;
+        border-top-left-radius: .5rem;
+        border-bottom-right-radius: 5rem;
+        border-top-right-radius: .5rem;
+    }
+
+    .main-wrapper.auth .container .toggle{
+        border-bottom-left-radius: 5rem;
+        border-top-left-radius: .5rem;
+        border-bottom-right-radius: 5rem;
+        border-top-right-radius: .5rem;
+    }
+}
+
+/* -----------------------------------
+    Footer Section
+------------------------------------*/
+
+footer{
+    background-color: var(--dfx-global-palette-navyblue);
+}
